@@ -1,0 +1,8 @@
+# bash_profile
+# vim: set filetype=sh :
+
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
+
+export PATH="$HOME/.cargo/bin:$PATH"

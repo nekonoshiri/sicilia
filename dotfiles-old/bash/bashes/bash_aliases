@@ -1,0 +1,47 @@
+# bash_aliases
+# vim: set filetype=sh :
+
+# rm alias
+alias rm='myrm'
+
+# ls aliases
+if [ "$(uname)" = 'Darwin' ]; then
+  alias ls='ls -G'
+else
+  alias ls='ls --color=auto'
+fi
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias a='la'
+
+# cd aliases
+alias c='cd'
+alias cd..='cd ..'
+alias c..='cd ..'
+alias ck='cd ..'
+alias cd~='cd ~'
+alias c~='cd ~'
+alias ch='cd ~'
+alias cd-="cd -"
+alias c-="cd -"
+alias cb="cd -"
+
+# vim aliases
+alias v='vim'
+alias gv='gvim'
+alias :e='nvr -s'
+
+# rename (Change Name)
+alias cn='mv -i -v'
+
+# completely remove
+alias annihilate='/bin/rm'
+
+# cal with color
+if type cal > /dev/null 2>&1; then
+  alias cal='cal | grep -C6 --color -E "(\s|^)$(date +"%e")(\s|$)"'
+fi
+
+# mozc config
+alias mozc-config='/usr/lib/mozc/mozc_tool -mode=config_dialog'

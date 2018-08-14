@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>ASHIKA Scoring System</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="nekonoshiri">
+    <meta name="description" content="ASHIKA Scoring System">
+    <link rel="stylesheet" href="/css/style.css">
+    <style type="text/css">
+      table.input input { width: 80px; }
+      table.input td { width: 90px; }
+      table.output td { width: 90px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>ASHIKA Scoring System</h1>
+    </header>
+    <div id="main">
+      <p>ASHIKA Scring System とは？</p>
+      <ul>
+        <li>１位のアシカスコア = (１位の得点 / ２位の得点) * 100</li>
+        <li>x 位のアシカスコア = (x 位の得点 / １位の得点) * 100, for x &gt; 2</li>
+      </ul>
+      <table class="input">
+        <caption>得点</caption>
+        <tbody>
+          <tr class="player">
+            <td>プレーヤー</td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+            <td><input type="text"></td>
+          </tr>
+          <tr class="score">
+            <td>１戦目</td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+          </tr>
+          <tr class="score">
+            <td>２戦目</td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+          </tr>
+          <tr class="score">
+            <td>３戦目</td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+          </tr>
+          <tr class="score">
+            <td>４戦目</td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+          </tr>
+          <tr class="score">
+            <td>５戦目</td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+          </tr>
+          <tr class="score">
+            <td>６戦目</td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+            <td><input type="number" step="0.01"></td>
+          </tr>
+          <tr class="sum">
+            <td>合計</td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <span style="margin:20px"></span>
+      <table class="output">
+        <caption>ASHIKA SCORE</caption>
+        <tbody>
+          <tr class="player">
+            <td>プレーヤー</td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+          </tr>
+          <tr class="score">
+            <td>１戦目</td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+          </tr>
+          <tr class="score">
+            <td>２戦目</td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+          </tr>
+          <tr class="score">
+            <td>３戦目</td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+          </tr>
+          <tr class="score">
+            <td>４戦目</td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+          </tr>
+          <tr class="score">
+            <td>５戦目</td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+          </tr>
+          <tr class="score">
+            <td>６戦目</td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+          </tr>
+          <tr class="sum">
+            <td>合計</td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+            <td><span></span></td>
+          </tr>
+        </tbody>
+      </table>
+      <span style="margin:20px"></span>
+      <p>スコア計算方式の変更</p>
+      <p class="scoretype">
+        <input type="radio" name="scoretype" value="ashika" checked>ASHIKA<br>
+        <input type="radio" name="scoretype" value="sekihairitsu">惜敗率
+      </p>
+      <p>
+      <br>**TODO: CSV 出力, 七戦目以降の動的追加, 得点表示（コピペ用）, NaN を表示しない**
+      </p>
+    </div>
+    <footer>
+      <nav>
+        <p>LINK</p>
+        <ul>
+          <li><a href="/index.html">top</a></li>
+        </ul>
+      </nav>
+    </footer>
+    <script type="text/javascript" src="ashikascs.js"> </script>
+  </body>
+</html>
+
+

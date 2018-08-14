@@ -1,0 +1,10 @@
+package: github.com/nekonoshiri/pouch
+homepage: https://github.com/nekonoshiri/pouch
+license: Apache License Version 2.0
+owners:
+  - name: Nekono Shiri
+    email: nekonoshiri@users.noreply.github.com
+import:
+- package: github.com/mitchellh/go-homedir
+- package: github.com/spf13/cobra
+- package: github.com/spf13/viper

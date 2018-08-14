@@ -1,0 +1,35 @@
+body {
+  width:1000px;
+  margin:auto;
+}
+
+header, footer, #main, aside {
+  display:block;
+  margin:10px;
+}
+
+#main {
+  float:left;
+  width:600px;
+  border:medium ridge silver;
+  padding:20px;
+  padding-top:5px;
+}
+
+aside {
+  float:right;
+  width:300px;
+}
+
+footer {
+  clear:both;
+}
+
+footer nav ul{
+  list-style-type:none;
+}
+
+footer nav ul li{
+  display:block;
+  padding:5px;
+}

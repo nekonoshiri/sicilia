@@ -1,0 +1,9 @@
+
+
+  message msg1 {
+  double dval = 0x10 ;
+  int32 x  =  12 ;
+string
+str512 =1;}
+
+message msg2{double dv=0;int32 y=1;string s_=2;}message m_{double val=0;}

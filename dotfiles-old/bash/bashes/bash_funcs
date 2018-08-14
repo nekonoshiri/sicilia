@@ -1,0 +1,27 @@
+# .bash_funcs
+# vim: set filetype=sh :
+
+# move file to "trash" directory
+myrm() {
+  local name="trash_"$(date +%Y%m%d)
+  local dir=~/tmp/.trash/$name
+
+  if [ -e $dir ]; then
+    if [ ! -d $dir ]; then
+      /bin/rm -rf $dir
+      mkdir $dir
+    else
+      for arg in $*
+      do
+        local tmp=$dir/$arg
+        if [ -e $tmp ]; then
+          /bin/rm -rf $tmp
+        fi
+      done
+    fi
+  else
+    mkdir -p $dir
+  fi
+
+  mv -f $* $dir
+}

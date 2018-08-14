@@ -1,0 +1,11 @@
+# vim swap files
+.*.sw*
+# emacs backup files
+*~
+*#
+.#*
+# executable files
+pouch
+pouch.exe
+# vendor
+vendor/

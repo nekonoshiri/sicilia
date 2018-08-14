@@ -1,0 +1,20 @@
+# bashrc
+# vim: set filetype=sh :
+
+sourcef(){
+  if [ -f $1 ]; then
+    . $1
+  fi
+}
+
+# Alias definitions.
+sourcef ~/.dotfiles/bash/bashes/bash_aliases
+
+# Function definitions.
+sourcef ~/.dotfiles/bash/bashes/bash_funcs
+
+# Exports
+sourcef ~/.dotfiles/bash/bashes/bash_exports
+
+# Local definitions.
+sourcef ~/.dotfiles/bash/bashes/bash_local
